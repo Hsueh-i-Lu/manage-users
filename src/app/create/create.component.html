@@ -1,0 +1,17 @@
+<h1>CREATE PAGE</h1>
+<div>
+  <button (click)="gotoHomePage()">Home</button>
+</div>
+
+<form [formGroup]="createForm">
+  <p>
+    First Name:
+    <input type="text" formControlName="first_name" /><br /><br />
+    Last Name:
+    <input type="text" formControlName="last_name" /><br /><br />
+    Email Address:
+    <input type="email" formControlName="email_address" /><br /><br />
+  </p>
+
+  <button type="button" (click)="doCreate()">Create!</button>
+</form>

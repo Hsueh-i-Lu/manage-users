@@ -1,0 +1,21 @@
+<h1>SEARCH PAGE</h1>
+<div>
+  <button (click)="gotoHomePage()">Home</button>
+</div>
+
+<form [formGroup]="searchForm">
+  <p>
+    First Name:
+    <input type="text" formControlName="first_name" />
+  </p>
+  <button type="button" (click)="doSearch()">Search!</button>
+</form>
+<div class="search-item" *ngFor="let user of users | async">
+  <br />
+  First Name: {{ user.first_name }} <br />
+  Last Name: {{ user.last_name }} <br />
+  User ID: {{ user.id }} <br />
+  Email: {{ user.email }} <br />
+  IP: {{ user.ip_address }} <br />
+  <br />
+</div>
